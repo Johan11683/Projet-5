@@ -1,0 +1,26 @@
+header {
+    margin: 20px;
+}
+
+ul {
+    display: flex;
+    gap: 40px;
+    @media (max-width: 600px) {
+        gap:10px;
+    }
+  }
+
+nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1440px;
+}
+
+.logo {
+    @media (max-width: 600px) {
+        width: 145px;
+        height: 47px;
+    }
+}
+  

@@ -1,0 +1,29 @@
+header {
+  margin: 20px;
+}
+
+ul {
+  display: flex;
+  gap: 40px;
+}
+@media (max-width: 600px) {
+  ul {
+    gap: 10px;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1440px;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 145px;
+    height: 47px;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */
