@@ -1,5 +1,5 @@
 header {
-  margin: 20px;
+  margin: 25px;
 }
 
 ul {
@@ -35,7 +35,6 @@ footer {
   background-color: black;
   color: white;
   padding: 35px 0 20px 0;
-  margin: 0;
 }
 footer .logo {
   width: 122px;
@@ -45,7 +44,6 @@ footer .logo {
 @media (max-width: 600px) {
   footer {
     font-size: 0.5rem;
-    flex-wrap: wrap;
   }
 }
 footer .break-mobile {
@@ -55,6 +53,52 @@ footer .break-mobile {
   footer .break-mobile {
     display: block;
   }
+}
+
+.home-container {
+  margin: 25px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  border-radius: 25px;
+  display: flex;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-container .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.image-container h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 36px;
+  z-index: 2;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+.image-container .overlay-title {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 :root {

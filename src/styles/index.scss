@@ -1,9 +1,9 @@
 @use "./layout/header";
 @use "./layout/footer";
+@use "./pages-styles/home";
 
 :root {
-    font-family: "Montserrat", sans-serif;
-
+  font-family: "Montserrat", sans-serif
 }
 
 body {

@@ -7,7 +7,6 @@ footer {
     background-color: black;
     color: white;
     padding: 35px 0 20px 0;
-    margin: 0;
 
       .logo {
         width: 122px;
@@ -16,7 +15,6 @@ footer {
     }
     @media (max-width: 600px) {
         font-size: 0.5rem;
-        flex-wrap: wrap;
     }
     .break-mobile {
         display: none; // Caché par défaut sur grand écran

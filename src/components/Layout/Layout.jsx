@@ -6,7 +6,7 @@ import '../../styles/index.css';
 
 const Layout = ({ children }) => {
   return (
-    <div className='body-container'>
+    <div>
       <Header />
       <main>{children}</main>
       <Footer />
