@@ -8,6 +8,7 @@
   background-color: #f6f6f6;
   align-items: center; /* Centrer les cartes verticalement */
   max-width: 1240px;
+  margin-bottom: 30px;
 }
 
 .card {
@@ -17,6 +18,7 @@
   border-radius: 25px; /* Bord arrondi de la carte */
   overflow: hidden; /* Masquer ce qui dépasse */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre autour des cartes */
+  cursor: pointer;
 }
 .card img {
   width: 100%; /* L'image occupe toute la largeur de la carte */

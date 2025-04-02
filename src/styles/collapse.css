@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.collapse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.collapse-container {
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+.collapse-toggle {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FF6060;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  text-align: left;
+  width: 100%;
+  border-radius: 4px;
+}
+.collapse-toggle i {
+  font-size: 32px; /* Taille de l'icône */
+}
+
+.collapse-content {
+  display: block; /* Rendre l'élément visible (initialement il sera de hauteur 0) */
+  max-height: 0; /* Hauteur maximale à 0 pour le cacher par défaut */
+  overflow: hidden; /* Masquer le contenu lorsque le collapse est fermé */
+  padding: 0 0 0 30px; /* Pas de padding au début */
+  background-color: #f6f6f6; /* Couleur de fond du contenu */
+  border-radius: 4px;
+  transition: max-height 0.3s ease, padding 0.3s ease; /* Animation pour la hauteur maximale et le padding */
+}
+
+.collapse-content.open {
+  max-height: 200px; /* Hauteur maximale quand le collapse est ouvert (ajuste selon le contenu) */
+  padding: 10px 0 10px 30px; /* Ajouter du padding quand le collapse est ouvert */
+}
+
+.collapse-arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #f6f6f6; /* Couleur de l'icône de la flèche */
+  cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
+}
+
+/*# sourceMappingURL=collapse.css.map */

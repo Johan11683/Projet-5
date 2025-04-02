@@ -1,8 +1,10 @@
 @use "./layout/header";
 @use "./layout/footer";
 @use "./pages-styles/home";
+@use "./pages-styles/about";
 @use "./Banner.css";
 @use "./Cards.css";
+@use "./collapse.css";
 
 
 // commande pour watch tous les styles scss
@@ -18,20 +20,10 @@
   box-sizing: border-box; /* Appliquer border-box à tous les éléments */
 }
 
-.body-container {
+body {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap:30px;
-}
-
-.home-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+  
 }
 
 a {

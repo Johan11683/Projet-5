@@ -1,4 +1,10 @@
 @charset "UTF-8";
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
 .nav-bar {
   display: flex;
   align-items: center;
@@ -49,6 +55,20 @@ footer .break-mobile {
   footer .break-mobile {
     display: block;
   }
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .image-container {
@@ -108,6 +128,7 @@ footer .break-mobile {
   background-color: #f6f6f6;
   align-items: center; /* Centrer les cartes verticalement */
   max-width: 1240px;
+  margin-bottom: 30px;
 }
 
 .card {
@@ -117,6 +138,7 @@ footer .break-mobile {
   border-radius: 25px; /* Bord arrondi de la carte */
   overflow: hidden; /* Masquer ce qui dépasse */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre autour des cartes */
+  cursor: pointer;
 }
 
 .card img {
@@ -139,6 +161,59 @@ footer .break-mobile {
 }
 
 
+.collapse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.collapse-container {
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+.collapse-toggle {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FF6060;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  text-align: left;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.collapse-toggle i {
+  font-size: 32px; /* Taille de l'icône */
+}
+
+.collapse-content {
+  display: block; /* Rendre l'élément visible (initialement il sera de hauteur 0) */
+  max-height: 0; /* Hauteur maximale à 0 pour le cacher par défaut */
+  overflow: hidden; /* Masquer le contenu lorsque le collapse est fermé */
+  padding: 0 0 0 30px; /* Pas de padding au début */
+  background-color: #f6f6f6; /* Couleur de fond du contenu */
+  border-radius: 4px;
+  transition: max-height 0.3s ease, padding 0.3s ease; /* Animation pour la hauteur maximale et le padding */
+}
+
+.collapse-content.open {
+  max-height: 200px; /* Hauteur maximale quand le collapse est ouvert (ajuste selon le contenu) */
+  padding: 10px 0 10px 30px; /* Ajouter du padding quand le collapse est ouvert */
+}
+
+.collapse-arrow {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #f6f6f6; /* Couleur de l'icône de la flèche */
+  cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
+}
+
+
 :root {
   font-family: "Montserrat", sans-serif;
 }
@@ -147,20 +222,9 @@ footer .break-mobile {
   box-sizing: border-box; /* Appliquer border-box à tous les éléments */
 }
 
-.body-container {
+body {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.home-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
 }
 
 a {
