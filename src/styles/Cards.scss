@@ -1,0 +1,38 @@
+.cards-container {
+  display: flex; /* Utiliser Flexbox */
+  flex-wrap: wrap; /* Autoriser le passage à la ligne */
+  gap: 50px; /* Espacement uniforme horizontal et vertical entre les cartes */
+  padding: 50px; /* Espacement autour des cartes */
+  border-radius: 25px; /* Bordure arrondie */
+  background-color: #f6f6f6;
+  align-items: center; /* Centrer les cartes verticalement */
+  max-width: 1240px;
+}
+
+.card {
+  width: 340px; /* Fixer la largeur des cartes */
+  height: 340px; /* Fixer la hauteur des cartes */
+  position: relative; /* Pour permettre de positionner le texte au-dessus de l'image */
+  border-radius: 25px; /* Bord arrondi de la carte */
+  overflow: hidden; /* Masquer ce qui dépasse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre autour des cartes */
+
+  img {
+    width: 100%; /* L'image occupe toute la largeur de la carte */
+    height: 100%; /* L'image occupe toute la hauteur de la carte */
+    object-fit: cover; /* L'image couvre tout le conteneur sans déformation */
+  }
+
+  h2 {
+    position: absolute; /* Positionner le texte sur l'image */
+    bottom: 10px; /* Positionner le texte en bas */
+    left: 10px; /* Aligner le texte à gauche */
+    color: white;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Améliorer la lisibilité du texte */
+    max-width: 60%; /* Permet au texte de ne pas dépasser 60% de la largeur de l'image */
+    word-wrap: break-word; /* Permet au texte de revenir à la ligne si nécessaire */
+    white-space: normal; /* Permet au texte de revenir à la ligne normalement */
+    text-align: left; /* Aligner le texte à gauche */
+  }
+}

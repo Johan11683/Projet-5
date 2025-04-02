@@ -1,16 +1,18 @@
 import React from 'react';
+import Banner from '../components/Banner';
+import Cards from '../components/Cards';
 
 const Home = () => {
   return (
     <div className="home-container">
-      <div className="image-container">
-        <img src='../public/landscape.webp' alt="falaise" />
-        <div className="image-overlay"></div> {/* Overlay pour assombrir */}
-        <h1 className="overlay-title">Chez vous, partout et ailleurs</h1>
-      </div>
+      <Banner 
+        imageSrc="/landscape.webp" 
+        altText="falaise" 
+        title="Chez vous, partout et ailleurs" 
+      />
+      <Cards />
     </div>
   );
 };
-
 
 export default Home;

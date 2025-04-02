@@ -1,28 +1,23 @@
-header {
-  margin: 25px;
+@charset "UTF-8";
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Écarte le logo et le menu */
+  width: 1240px; /* Largeur fixe */
 }
-
-ul {
+@media (max-width: 600px) {
+  .nav-bar .logo {
+    width: 145px;
+    height: 47px;
+  }
+}
+.nav-bar ul {
   display: flex;
   gap: 40px;
 }
 @media (max-width: 600px) {
-  ul {
+  .nav-bar ul {
     gap: 10px;
-  }
-}
-
-nav {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  max-width: 1440px;
-}
-
-@media (max-width: 600px) {
-  .logo {
-    width: 145px;
-    height: 47px;
   }
 }
 

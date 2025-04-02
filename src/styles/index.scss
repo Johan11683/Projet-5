@@ -1,16 +1,38 @@
 @use "./layout/header";
 @use "./layout/footer";
 @use "./pages-styles/home";
+@use "./Banner.css";
+@use "./Cards.css";
+
+
+// commande pour watch tous les styles scss
+// sass --watch src/styles:src/styles
+
+
 
 :root {
   font-family: "Montserrat", sans-serif
 }
 
-body {
-    max-width: 1440px;
-    margin: 20px auto;
-  }
-  
+* {
+  box-sizing: border-box; /* Appliquer border-box à tous les éléments */
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:30px;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
 
 a {
     text-decoration: none;
