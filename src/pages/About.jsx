@@ -5,7 +5,7 @@ import Collapse from "../components/Collapse";
 
 const About = () => {
   return ( 
-  <div>
+  <div id="back-to-home">
     <div className="about-container">
     <Banner 
           imageSrc="/montagne.webp" 

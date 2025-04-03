@@ -18,13 +18,7 @@ footer {
     @media (max-width: 600px) {
         font-size: 0.5rem;
     }
-    .break-mobile {
-        display: none; // Caché par défaut sur grand écran
-      
-        @media (max-width: 600px) {
-          display: block; // Devient visible sous 600px
-        }
-      }
+    
       
 
 }
