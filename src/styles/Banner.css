@@ -7,6 +7,11 @@
   display: flex;
   max-width: 1240px;
 }
+@media (max-width: 600px) {
+  .image-container {
+    height: 110px;
+  }
+}
 .image-container img {
   width: 100%;
   height: 100%;
@@ -30,6 +35,14 @@
   font-size: 36px;
   z-index: 2;
   text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+  cursor: default;
+}
+@media (max-width: 600px) {
+  .image-container h1 {
+    text-align: left;
+    left: 130px;
+    font-size: 24px;
+  }
 }
 .image-container .overlay-title {
   display: flex;
@@ -38,7 +51,7 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=Banner.css.map */

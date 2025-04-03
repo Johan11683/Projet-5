@@ -5,11 +5,16 @@
 @use "./Banner.css";
 @use "./Cards.css";
 @use "./collapse.css";
+@use "./pages-styles/Error404.css";
+
 
 
 // commande pour watch tous les styles scss
 // sass --watch src/styles:src/styles
 
+html {
+  overflow-y: scroll;
+}
 
 
 :root {
@@ -20,15 +25,23 @@
   box-sizing: border-box; /* Appliquer border-box à tous les éléments */
 }
 
-body {
+.body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  
+  align-items: center;
+
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
 
 a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
   
     &:hover {
       text-decoration: underline;
@@ -44,7 +57,13 @@ ul {
 }
 
 
-  
+.break-mobile {
+  display: none; // Caché par défaut sur grand écran
+
+  @media (max-width: 600px) {
+    display: block; // Devient visible sous 600px
+  }
+}
 
 
 // :root {

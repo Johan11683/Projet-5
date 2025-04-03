@@ -8,8 +8,8 @@ const Home = () => {
       <Banner 
         imageSrc="/landscape.webp" 
         altText="falaise" 
-        title="Chez vous, partout et ailleurs" 
-      />
+        title={<div>Chez vous,<br className='break-mobile'></br> partout et ailleurs</div>}      
+        />
       <Cards />
     </div>
   );

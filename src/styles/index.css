@@ -36,7 +36,8 @@ footer {
   background-color: black;
   color: white;
   padding: 35px 0 20px 0;
-  width: 1440px;
+  width: 100%;
+  cursor: default;
 }
 footer .logo {
   width: 122px;
@@ -62,7 +63,6 @@ footer .break-mobile {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
 }
 
 .about-container {
@@ -81,6 +81,11 @@ footer .break-mobile {
   max-width: 1240px;
 }
 
+@media (max-width: 600px) {
+  .image-container {
+    height: 110px;
+  }
+}
 .image-container img {
   width: 100%;
   height: 100%;
@@ -106,8 +111,16 @@ footer .break-mobile {
   font-size: 36px;
   z-index: 2;
   text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+  cursor: default;
 }
 
+@media (max-width: 600px) {
+  .image-container h1 {
+    text-align: left;
+    left: 130px;
+    font-size: 24px;
+  }
+}
 .image-container .overlay-title {
   display: flex;
   width: 100%;
@@ -115,22 +128,28 @@ footer .break-mobile {
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 
 .cards-container {
   display: flex; /* Utiliser Flexbox */
   flex-wrap: wrap; /* Autoriser le passage à la ligne */
-  gap: 50px; /* Espacement uniforme horizontal et vertical entre les cartes */
+  gap: 60px; /* Espacement uniforme horizontal et vertical entre les cartes */
   padding: 50px; /* Espacement autour des cartes */
   border-radius: 25px; /* Bordure arrondie */
   background-color: #f6f6f6;
   align-items: center; /* Centrer les cartes verticalement */
   max-width: 1240px;
-  margin-bottom: 30px;
+  margin: 30px 0 30px 0;
 }
 
+@media (max-width: 600px) {
+  .cards-container {
+    background: none;
+    margin: 0;
+  }
+}
 .card {
   width: 340px; /* Fixer la largeur des cartes */
   height: 340px; /* Fixer la hauteur des cartes */
@@ -141,6 +160,11 @@ footer .break-mobile {
   cursor: pointer;
 }
 
+@media (max-width: 600px) {
+  .card {
+    max-height: 255px;
+  }
+}
 .card img {
   width: 100%; /* L'image occupe toute la largeur de la carte */
   height: 100%; /* L'image occupe toute la hauteur de la carte */
@@ -170,7 +194,7 @@ footer .break-mobile {
 
 .collapse-container {
   margin-bottom: 20px;
-  width: 70%;
+  max-width: 1000px;
 }
 
 .collapse-toggle {
@@ -214,6 +238,34 @@ footer .break-mobile {
 }
 
 
+.error-Page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  color: #FF6060;
+}
+
+.error-Page .error-Title {
+  font-size: 288px;
+  font-weight: 700;
+}
+
+.error-Page .error-Text {
+  font-size: 36px;
+}
+
+.error-Page a {
+  margin-bottom: 100px;
+  text-decoration: underline;
+}
+
+
+html {
+  overflow-y: scroll;
+}
+
 :root {
   font-family: "Montserrat", sans-serif;
 }
@@ -222,14 +274,21 @@ footer .break-mobile {
   box-sizing: border-box; /* Appliquer border-box à tous les éléments */
 }
 
-body {
+.body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 a:hover {
   text-decoration: underline;
@@ -243,6 +302,15 @@ a:hover {
 
 ul {
   list-style: none;
+}
+
+.break-mobile {
+  display: none;
+}
+@media (max-width: 600px) {
+  .break-mobile {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

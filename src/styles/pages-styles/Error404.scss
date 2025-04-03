@@ -1,0 +1,22 @@
+.error-Page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    color: #FF6060;
+
+    .error-Title {
+        font-size: 288px;
+        font-weight: 700;
+    }
+    .error-Text {
+        font-size: 36px;
+    }
+
+    a {
+        margin-bottom: 100px;
+        text-decoration: underline;
+    }
+}
+

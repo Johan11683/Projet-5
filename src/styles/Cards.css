@@ -2,13 +2,19 @@
 .cards-container {
   display: flex; /* Utiliser Flexbox */
   flex-wrap: wrap; /* Autoriser le passage à la ligne */
-  gap: 50px; /* Espacement uniforme horizontal et vertical entre les cartes */
+  gap: 60px; /* Espacement uniforme horizontal et vertical entre les cartes */
   padding: 50px; /* Espacement autour des cartes */
   border-radius: 25px; /* Bordure arrondie */
   background-color: #f6f6f6;
   align-items: center; /* Centrer les cartes verticalement */
   max-width: 1240px;
-  margin-bottom: 30px;
+  margin: 30px 0 30px 0;
+}
+@media (max-width: 600px) {
+  .cards-container {
+    background: none;
+    margin: 0;
+  }
 }
 
 .card {
@@ -19,6 +25,11 @@
   overflow: hidden; /* Masquer ce qui dépasse */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre autour des cartes */
   cursor: pointer;
+}
+@media (max-width: 600px) {
+  .card {
+    max-height: 255px;
+  }
 }
 .card img {
   width: 100%; /* L'image occupe toute la largeur de la carte */

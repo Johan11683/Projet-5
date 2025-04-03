@@ -1,0 +1,21 @@
+.error-Page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  color: #FF6060;
+}
+.error-Page .error-Title {
+  font-size: 288px;
+  font-weight: 700;
+}
+.error-Page .error-Text {
+  font-size: 36px;
+}
+.error-Page a {
+  margin-bottom: 100px;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=Error404.css.map */
