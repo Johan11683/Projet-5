@@ -9,7 +9,8 @@ const About = () => {
     <div className="about-container">
     <Banner 
           imageSrc="/montagne.webp" 
-          altText="falaise" 
+          altText="falaise"
+          overlayOpacity={0.2}
         />
       
     </div>

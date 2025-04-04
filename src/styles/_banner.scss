@@ -12,7 +12,6 @@ $overlay-color: rgba(0, 0, 0, 0.6);
   border-radius: 25px;
   display: flex;
 
-  // Responsive adjustments
   @media (max-width: 600px) {
     width: 360px;
     height: 110px;
