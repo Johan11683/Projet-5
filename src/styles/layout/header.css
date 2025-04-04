@@ -12,6 +12,11 @@ nav {
   width: 1240px; /* Largeur fixe */
 }
 @media (max-width: 600px) {
+  .nav-bar {
+    width: 350px;
+  }
+}
+@media (max-width: 600px) {
   .nav-bar .logo {
     width: 145px;
     height: 47px;

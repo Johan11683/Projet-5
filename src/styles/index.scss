@@ -6,6 +6,8 @@
 @use "./Cards.css";
 @use "./collapse.css";
 @use "./pages-styles/Error404.css";
+@use "./Slideshow.scss";
+@use "./pages-styles/HousingFiles.scss";
 
 
 // commande pour watch tous les styles scss
@@ -17,19 +19,21 @@ html {
 
 
 :root {
-  font-family: "Montserrat", sans-serif
+  font-family: "Montserrat", sans-serif;
+  --color-primary: #FF6060;   /* Couleur principale */
+  --color-secondary: #FFFFFF; /* Couleur secondaire */
+  --color-third: #f6f6f6;
 }
 
 * {
   box-sizing: border-box; /* Appliquer border-box à tous les éléments */
 }
 
-.body {
+.body-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 html, body {

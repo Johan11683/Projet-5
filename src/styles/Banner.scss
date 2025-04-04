@@ -7,6 +7,7 @@
     display: flex;
     max-width: 1240px;
     @media (max-width: 600px) {
+      width: 360px;
       height: 110px;
      
   }
@@ -33,7 +34,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: white;
+      color: var(--color-secondary);
       font-size: 36px;
       z-index: 2; // Placer le titre au-dessus de l'overlay
       text-shadow: 

@@ -2,6 +2,7 @@ nav {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    
 }
 
 .nav-bar {
@@ -9,6 +10,9 @@ nav {
     align-items: center;
     justify-content: space-between; /* Écarte le logo et le menu */
     width: 1240px; /* Largeur fixe */
+    @media (max-width: 600px) {
+        width: 350px;
+    }
     .logo {
         @media (max-width: 600px) {
             width: 145px;

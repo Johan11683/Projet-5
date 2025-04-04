@@ -12,6 +12,11 @@ nav {
   width: 1240px; /* Largeur fixe */
 }
 @media (max-width: 600px) {
+  .nav-bar {
+    width: 350px;
+  }
+}
+@media (max-width: 600px) {
   .nav-bar .logo {
     width: 145px;
     height: 47px;
@@ -34,7 +39,7 @@ footer {
   align-items: center;
   gap: 20px;
   background-color: black;
-  color: white;
+  color: var(--color-secondary);
   padding: 35px 0 20px 0;
   width: 100%;
   cursor: default;
@@ -61,6 +66,7 @@ footer .logo {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  width: 1240px;
 }
 
 .image-container {
@@ -75,6 +81,7 @@ footer .logo {
 
 @media (max-width: 600px) {
   .image-container {
+    width: 360px;
     height: 110px;
   }
 }
@@ -99,7 +106,7 @@ footer .logo {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--color-secondary);
   font-size: 36px;
   z-index: 2;
   text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
@@ -190,29 +197,45 @@ footer .logo {
   max-width: 1000px;
 }
 
+@media (max-width: 600px) {
+  .collapse-container {
+    width: 360px;
+  }
+}
 .collapse-toggle {
   display: flex;
   justify-content: space-between;
-  background-color: #FF6060;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
   border: none;
   padding: 10px;
   font-size: 24px;
+  font-weight: 700;
   text-align: left;
   width: 100%;
   border-radius: 4px;
 }
 
+@media (max-width: 600px) {
+  .collapse-toggle {
+    font-size: 16px;
+  }
+}
 .collapse-toggle i {
   font-size: 32px; /* Taille de l'icône */
 }
 
+@media (max-width: 600px) {
+  .collapse-toggle i {
+    font-size: 18px;
+  }
+}
 .collapse-content {
   display: block; /* Rendre l'élément visible (initialement il sera de hauteur 0) */
   max-height: 0; /* Hauteur maximale à 0 pour le cacher par défaut */
   overflow: hidden; /* Masquer le contenu lorsque le collapse est fermé */
   padding: 0 0 0 30px; /* Pas de padding au début */
-  background-color: #f6f6f6; /* Couleur de fond du contenu */
+  background-color: var(--color-third); /* Couleur de fond du contenu */
   border-radius: 4px;
   transition: max-height 0.3s ease, padding 0.3s ease; /* Animation pour la hauteur maximale et le padding */
 }
@@ -222,11 +245,16 @@ footer .logo {
   padding: 10px 0 10px 30px; /* Ajouter du padding quand le collapse est ouvert */
 }
 
+@media (max-width: 600px) {
+  .collapse-content.open {
+    font-size: 14px;
+  }
+}
 .collapse-arrow {
   background: none;
   border: none;
   padding: 0;
-  color: #f6f6f6; /* Couleur de l'icône de la flèche */
+  color: var(--color-third); /* Couleur de l'icône de la flèche */
   cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
 }
 
@@ -268,19 +296,243 @@ footer .logo {
 }
 
 
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 1240px; /* Limiter la largeur max du carrousel */
+  height: 415px; /* Fixer la hauteur du carrousel à 255px */
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 100%; /* Fixer la hauteur pour que l'image remplisse entièrement le conteneur */
+  object-fit: cover; /* L'image remplira le conteneur sans déformation, mais peut être rognée */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 180px;
+  color: var(--color-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.arrow.left {
+  left: 0;
+}
+
+.arrow.right {
+  right: 0;
+}
+
+.slide-count {
+  position: absolute;
+  bottom: 30px;
+  left: 610px;
+  color: var(--color-secondary);
+  font-size: 1rem;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .slideshow {
+    height: 200px; /* Ajuster la hauteur du carrousel sur les petits écrans */
+  }
+  .arrow {
+    font-size: 100px; /* Réduire la taille des flèches en responsive */
+  }
+  .slide-count {
+    left: 50%; /* Centrer le texte dans le carrousel */
+    transform: translateX(-50%);
+    font-size: 0.8rem; /* Réduire la taille du texte */
+  }
+}
+.housing-files {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 20px;
+  /* Modification spécifique pour le responsive */
+}
+.housing-files .carrousel-container {
+  text-align: center;
+  margin-bottom: 40px; /* Espacement entre le carrousel et les informations */
+}
+.housing-files .housing-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  .housing-files .housing-info {
+    flex-direction: column; /* Changer la direction du flex en colonne */
+    align-items: center; /* Centrer les éléments horizontalement */
+    gap: 10px; /* Réduire l'espacement entre les éléments */
+  }
+}
+.housing-files .housing-content-left {
+  flex: 1;
+}
+.housing-files .housing-title {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+@media (max-width: 600px) {
+  .housing-files .housing-title {
+    font-size: 18px;
+  }
+}
+.housing-files .housing-location {
+  font-size: 18px;
+  margin-top: 10px;
+}
+@media (max-width: 600px) {
+  .housing-files .housing-location {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+.housing-files .housing-tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.housing-files .tag {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 5px 15px;
+  border-radius: 25px;
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  .housing-files .tag {
+    font-weight: bold;
+  }
+}
+.housing-files .housing-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .housing-files .housing-content-right {
+    flex-direction: row-reverse; /* Mettre les éléments en ligne */
+    justify-content: space-between; /* Espacer les éléments */
+    align-items: center; /* Centrer les éléments verticalement */
+    width: 100%; /* Assurer que le conteneur prend toute la largeur */
+  }
+}
+.housing-files .housing-rating {
+  display: flex;
+  gap: 5px;
+}
+.housing-files .star {
+  font-size: 35px;
+  color: #ccc;
+}
+@media (max-width: 600px) {
+  .housing-files .star {
+    font-size: 25px;
+  }
+}
+.housing-files .star.filled {
+  color: var(--color-primary);
+}
+.housing-files .housing-host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.housing-files .host-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+@media (max-width: 600px) {
+  .housing-files .host-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+.housing-files .host-name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  text-align: right;
+  max-width: 45px;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+@media (max-width: 600px) {
+  .housing-files .host-name {
+    font-size: 12px;
+  }
+}
+.housing-files .housing-collapses {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .housing-files .housing-collapses {
+    flex-direction: column; /* Basculer en colonne pour aligner les éléments sous forme de liste */
+    gap: 10px; /* Réduire l'espace entre les éléments */
+    align-items: center; /* Centrer les éléments horizontalement */
+  }
+}
+.housing-files .collapse-container {
+  flex: 1;
+  max-width: 48%;
+  margin-top: 20px;
+}
+@media (max-width: 600px) {
+  .housing-files .collapse-container {
+    max-width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 600px) {
+  .housing-files .tag {
+    width: 84px; /* Fixer la largeur du tag */
+    min-height: 18px; /* Fixer la hauteur du tag */
+    text-align: center; /* Centrer le texte horizontalement */
+    display: flex; /* Utilisation de flexbox pour un centrage plus précis */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    padding: 2px 6px; /* Ajuster le padding pour ne pas dépasser les dimensions */
+    font-size: 10px; /* Réduire la taille de la police pour s'adapter */
+    border-radius: 12px; /* Ajuster les bords pour correspondre à la taille */
+  }
+}
+
 html {
   overflow-y: scroll;
 }
 
 :root {
   font-family: "Montserrat", sans-serif;
+  --color-primary: #FF6060; /* Couleur principale */
+  --color-secondary: #FFFFFF; /* Couleur secondaire */
+  --color-third: #f6f6f6;
 }
 
 * {
   box-sizing: border-box; /* Appliquer border-box à tous les éléments */
 }
 
-.body {
+.body-container {
   display: flex;
   flex-direction: column;
   justify-content: center;

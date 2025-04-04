@@ -1,0 +1,62 @@
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 1240px; /* Limiter la largeur max du carrousel */
+  height: 415px; /* Fixer la hauteur du carrousel à 255px */
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 100%; /* Fixer la hauteur pour que l'image remplisse entièrement le conteneur */
+  object-fit: cover; /* L'image remplira le conteneur sans déformation, mais peut être rognée */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 180px;
+  color: var(--color-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.arrow.left {
+  left: 0;
+}
+
+.arrow.right {
+  right: 0;
+}
+
+.slide-count {
+  position: absolute;
+  bottom: 30px;
+  left: 610px;
+  color: var(--color-secondary);
+  font-size: 1rem;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .slideshow {
+    height: 200px; /* Ajuster la hauteur du carrousel sur les petits écrans */
+  }
+
+  .arrow {
+    font-size: 100px; /* Réduire la taille des flèches en responsive */
+  }
+
+  .slide-count {
+    left: 50%; /* Centrer le texte dans le carrousel */
+    transform: translateX(-50%);
+    font-size: 0.8rem; /* Réduire la taille du texte */
+  }
+}
