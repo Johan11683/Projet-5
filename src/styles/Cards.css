@@ -7,7 +7,7 @@
   background-color: #f6f6f6;
   align-items: center;
   max-width: 1240px;
-  margin: 30px 0 30px 0;
+  margin: 30px 0;
 }
 @media (max-width: 600px) {
   .cards-container {
@@ -40,7 +40,7 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
-  color: white;
+  color: var(--color-secondary);
   font-size: 18px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   max-width: 60%;

@@ -2,31 +2,33 @@
 @use "./layout/footer";
 @use "./pages-styles/home";
 @use "./pages-styles/about";
+@use "./Slideshow.scss";
+@use "./pages-styles/HousingFiles.scss";
 @use "./Banner.css";
 @use "./Cards.css";
 @use "./collapse.css";
 @use "./pages-styles/Error404.css";
-@use "./Slideshow.scss";
-@use "./pages-styles/HousingFiles.scss";
 
-
-// commande pour watch tous les styles scss
+// Commande pour la surveillance des styles SCSS
 // sass --watch src/styles:src/styles
 
 html {
   overflow-y: scroll;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 :root {
   font-family: "Montserrat", sans-serif;
   --color-primary: #FF6060;   /* Couleur principale */
   --color-secondary: #FFFFFF; /* Couleur secondaire */
-  --color-third: #f6f6f6;
-}
-
-* {
-  box-sizing: border-box; /* Appliquer border-box à tous les éléments */
+  --color-third: #f6f6f6;     /* Couleur de fond */
 }
 
 .body-container {
@@ -36,35 +38,29 @@ html {
   align-items: center;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
-
 a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  
-    &:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 600px) {
-        font-size: 12px;
-        text-transform: uppercase;
-      }
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
   }
-  
-ul {
-    list-style: none; 
-}
-
-
-.break-mobile {
-  display: none; // Caché par défaut sur grand écran
 
   @media (max-width: 600px) {
-    display: block; // Devient visible sous 600px
+    font-size: 12px;
+    text-transform: uppercase;
   }
 }
 
+ul {
+  list-style: none;
+}
+
+.break-mobile {
+  display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+}

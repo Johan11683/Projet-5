@@ -1,64 +1,67 @@
+$image-height: 190px;
+$image-width: 100%;
+$image-max-width: 1240px;
+$overlay-color: rgba(0, 0, 0, 0.6);
+
 .image-container {
-    position: relative;
+  position: relative;
+  width: $image-width;
+  height: $image-height;
+  max-width: $image-max-width;
+  overflow: hidden;
+  border-radius: 25px;
+  display: flex;
+
+  // Responsive adjustments
+  @media (max-width: 600px) {
+    width: 360px;
+    height: 110px;
+  }
+
+  img {
     width: 100%;
-    height: 190px;
-    overflow: hidden;
-    border-radius: 25px;
-    display: flex;
-    max-width: 1240px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-color;
+    z-index: 1;
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-secondary);
+    font-size: 36px;
+    z-index: 2;
+    text-shadow: 
+      1px 1px 0 black, 
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 black;
+    cursor: default;
     @media (max-width: 600px) {
-      width: 360px;
-      height: 110px;
-     
-  }
-  
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      
-    }
-  
-    .image-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 1; // Placer l'overlay au-dessus de l'image
-    }
-  
-    h1 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: var(--color-secondary);
-      font-size: 36px;
-      z-index: 2; // Placer le titre au-dessus de l'overlay
-      text-shadow: 
-        1px 1px 0 black, 
-        -1px -1px 0 black,
-        1px -1px 0 black,
-        -1px 1px 0 black;
-        cursor:default;
-        @media (max-width: 600px) {
-          text-align: left;
-          left: 130px; // Décale le texte à gauche
-          font-size: 24px;
-          
-      }
-        
-    }
-  
-    .overlay-title {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      align-items: center;
-      justify-content: center; 
-      margin: 0;
-      padding: 10px;
+      text-align: left;
+      left: 130px;
+      font-size: 24px;
     }
   }
+
+  .overlay-title {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+  }
+}

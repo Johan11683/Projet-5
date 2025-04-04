@@ -2,31 +2,36 @@ nav {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-    
-}
-
-.nav-bar {
+  }
+  
+  .nav-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Écarte le logo et le menu */
-    width: 1240px; /* Largeur fixe */
+    justify-content: space-between;
+    width: 1240px;
+    margin: 0 auto;
     @media (max-width: 600px) {
-        width: 350px;
+      width: 100%;
+      padding: 0 20px;
     }
+  
     .logo {
-        @media (max-width: 600px) {
-            width: 145px;
-            height: 47px;
-        }
+      @media (max-width: 600px) {
+        width: 145px;
+        height: 47px;
+      }
     }
+  
     ul {
-        display: flex;
-        gap: 40px;
-        @media (max-width: 600px) {
-            gap:10px;
-        }
-        }
+      display: flex;
+      gap: 40px;
+      @media (max-width: 600px) {
+        gap: 10px;
+      }
+  
+      li {
+        list-style: none;
+      }
     }
-
-
+  }
   

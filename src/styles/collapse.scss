@@ -1,66 +1,82 @@
+$collapse-bg-color: var(--color-third);
+$collapse-primary-color: var(--color-primary);
+$collapse-secondary-color: var(--color-secondary);
+$collapse-border-radius: 4px;
+$collapse-padding: 10px;
+$collapse-font-size: 24px;
+$collapse-toggle-font-size: 16px;
+$collapse-arrow-font-size: 32px;
+$collapse-small-arrow-font-size: 18px;
+
 .collapse {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .collapse-container {
-    margin-bottom: 20px;
-    max-width: 1000px;
-    @media (max-width: 600px) {
-        width: 360px;
-    }
+  margin-bottom: 20px;
+  max-width: 1000px;
+  
+  // Responsive adjustments
+  @media (max-width: 600px) {
+    width: 360px;
+  }
 }
 
 .collapse-toggle {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    border: none;
-    padding: 10px;
-    font-size: 24px;
-    font-weight: 700;
-    text-align: left;
-    width: 100%;
-    border-radius: 4px;
-    @media (max-width: 600px) {
-        font-size: 16px;
-    }
+  display: flex;
+  justify-content: space-between;
+  background-color: $collapse-primary-color;
+  color: $collapse-secondary-color;
+  border: none;
+  padding: $collapse-padding;
+  font-size: $collapse-font-size;
+  font-weight: 700;
+  text-align: left;
+  width: 100%;
+  border-radius: $collapse-border-radius;
+  
+  // Responsive adjustments
+  @media (max-width: 600px) {
+    font-size: $collapse-toggle-font-size;
+  }
 
-    i {
-        font-size: 32px; /* Taille de l'icône */
-        @media (max-width: 600px) {
-           font-size: 18px;
-          }
+  i {
+    font-size: $collapse-arrow-font-size;
+    
+    // Responsive adjustments
+    @media (max-width: 600px) {
+      font-size: $collapse-small-arrow-font-size;
     }
+  }
 }
 
 .collapse-content {
-    display: block; /* Rendre l'élément visible (initialement il sera de hauteur 0) */
-    max-height: 0; /* Hauteur maximale à 0 pour le cacher par défaut */
-    overflow: hidden; /* Masquer le contenu lorsque le collapse est fermé */
-    padding: 0 0 0 30px; /* Pas de padding au début */
-    background-color: var(--color-third); /* Couleur de fond du contenu */
-    border-radius: 4px;
-    transition: max-height 0.3s ease, padding 0.3s ease; /* Animation pour la hauteur maximale et le padding */
-    
-}
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 0 0 30px;
+  background-color: $collapse-bg-color;
+  border-radius: $collapse-border-radius;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 
-.collapse-content.open {
-    max-height: 200px; /* Hauteur maximale quand le collapse est ouvert (ajuste selon le contenu) */
-    padding: 10px 0 10px 30px; /* Ajouter du padding quand le collapse est ouvert */
+  &.open {
+    max-height: 200px; // Ajuste cette hauteur selon le contenu
+    padding: 10px 0 10px 30px;
+
+    // Responsive adjustments
     @media (max-width: 600px) {
-        font-size: 14px;
-      }
-    
+      font-size: 14px;
+    }
+  }
 }
 
 .collapse-arrow {
-    background: none;
-    border: none;
-    padding: 0;
-    color: var(--color-third); /* Couleur de l'icône de la flèche */
-    cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
+  background: none;
+  border: none;
+  padding: 0;
+  color: $collapse-bg-color;
+  cursor: pointer;
 }

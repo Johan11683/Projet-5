@@ -1,13 +1,11 @@
-@charset "UTF-8";
 .housing-files {
   max-width: 1240px;
   margin: 0 auto;
   padding: 20px;
-  /* Modification spécifique pour le responsive */
 }
 .housing-files .carrousel-container {
   text-align: center;
-  margin-bottom: 40px; /* Espacement entre le carrousel et les informations */
+  margin-bottom: 40px;
 }
 .housing-files .housing-info {
   display: flex;
@@ -17,9 +15,9 @@
 }
 @media (max-width: 600px) {
   .housing-files .housing-info {
-    flex-direction: column; /* Changer la direction du flex en colonne */
-    align-items: center; /* Centrer les éléments horizontalement */
-    gap: 10px; /* Réduire l'espacement entre les éléments */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 }
 .housing-files .housing-content-left {
@@ -59,7 +57,15 @@
 }
 @media (max-width: 600px) {
   .housing-files .tag {
-    font-weight: bold;
+    width: 84px;
+    min-height: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 6px;
+    font-size: 10px;
+    border-radius: 12px;
   }
 }
 .housing-files .housing-content-right {
@@ -70,10 +76,10 @@
 }
 @media (max-width: 600px) {
   .housing-files .housing-content-right {
-    flex-direction: row-reverse; /* Mettre les éléments en ligne */
-    justify-content: space-between; /* Espacer les éléments */
-    align-items: center; /* Centrer les éléments verticalement */
-    width: 100%; /* Assurer que le conteneur prend toute la largeur */
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 }
 .housing-files .housing-rating {
@@ -130,9 +136,9 @@
 }
 @media (max-width: 600px) {
   .housing-files .housing-collapses {
-    flex-direction: column; /* Basculer en colonne pour aligner les éléments sous forme de liste */
-    gap: 10px; /* Réduire l'espace entre les éléments */
-    align-items: center; /* Centrer les éléments horizontalement */
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
   }
 }
 .housing-files .collapse-container {
@@ -144,19 +150,6 @@
   .housing-files .collapse-container {
     max-width: 100%;
     margin: 0;
-  }
-}
-@media (max-width: 600px) {
-  .housing-files .tag {
-    width: 84px; /* Fixer la largeur du tag */
-    min-height: 18px; /* Fixer la hauteur du tag */
-    text-align: center; /* Centrer le texte horizontalement */
-    display: flex; /* Utilisation de flexbox pour un centrage plus précis */
-    align-items: center; /* Centrer verticalement */
-    justify-content: center; /* Centrer horizontalement */
-    padding: 2px 6px; /* Ajuster le padding pour ne pas dépasser les dimensions */
-    font-size: 10px; /* Réduire la taille de la police pour s'adapter */
-    border-radius: 12px; /* Ajuster les bords pour correspondre à la taille */
   }
 }
 

@@ -17,7 +17,8 @@ footer .logo {
 }
 @media (max-width: 600px) {
   footer {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
+    padding: 20px 0 10px 0;
   }
 }
 

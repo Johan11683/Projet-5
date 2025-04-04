@@ -9,17 +9,16 @@ footer {
     padding: 35px 0 20px 0;
     width: 100%;
     cursor: default;
-
-      .logo {
-        width: 122px;
-        height: 40px;
-        filter: brightness(0) invert(1); /* Change la couleur en blanc */      
+  
+    .logo {
+      width: 122px;
+      height: 40px;
+      filter: brightness(0) invert(1); /* Change la couleur en blanc */
     }
+  
     @media (max-width: 600px) {
-        font-size: 0.5rem;
+      font-size: 0.8rem;
+      padding: 20px 0 10px 0;
     }
-    
-      
-
-}
-
+  }
+  
