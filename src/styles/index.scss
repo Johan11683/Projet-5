@@ -1,16 +1,17 @@
-@use "./layout/header";
-@use "./layout/footer";
 @use "./pages-styles/home";
 @use "./pages-styles/about";
-@use "./Slideshow.scss";
-@use "./pages-styles/HousingFiles.scss";
-@use "./Banner.css";
-@use "./Cards.css";
-@use "./collapse.css";
-@use "./pages-styles/Error404.css";
+@use "./pages-styles/HousingFiles";
+@use "./pages-styles/Error404";
 
-// Commande pour la surveillance des styles SCSS
-// sass --watch src/styles:src/styles
+@use "./layout/header";
+@use "./layout/footer";
+
+@use "./cards";
+@use "./slideshow";
+@use "./banner";
+@use "./collapse";
+
+
 
 html {
   overflow-y: scroll;

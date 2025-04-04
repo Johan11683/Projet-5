@@ -1,7 +1,6 @@
 import React from 'react';
 import Card from './Card';
 import logements from '../datas/data'; // Assure-toi que ce fichier existe
-import '../styles/Cards.css';
 
 const Cards = () => {
   return (
