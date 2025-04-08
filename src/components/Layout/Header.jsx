@@ -10,7 +10,6 @@ const Header = () => {
             <ul>
               <li><Link to="/">Accueil</Link></li>
               <li><Link to="/about">A propos</Link></li>
-              {/* <li><Link to="/housing-files">Housing Files</Link></li> */}
             </ul>
         </div>
       </nav>
