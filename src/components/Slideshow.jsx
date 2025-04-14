@@ -27,6 +27,7 @@ const Slideshow = ({ pictures }) => {
 
       {hasMultipleImages && (
         <>
+        {/* {'\u2039'} et {'\u203A'}*/}
           <button className="arrow left" onClick={goToPrev}>‹</button>
           <button className="arrow right" onClick={goToNext}>›</button>
           <div className="slide-count">

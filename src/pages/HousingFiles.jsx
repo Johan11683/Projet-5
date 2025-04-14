@@ -7,14 +7,15 @@ import Slideshow from '../components/Slideshow';
 import Collapse from '../components/Collapse';
 
 const HousingFiles = () => {
-  const { id } = useParams();
-  const logement = logements.find((logement) => logement.id === id);
+  const { id } = useParams(); // Récupère l'id de l'URL
+  const logement = logements.find((logement) => logement.id === id); // Cherche un logement avec l'id correspondant
 
-  // Si aucun logement n'est trouvé, redirige vers la page d'erreur
+  // Si aucun logement n'est trouvé via la recherche d'id, redirige vers la page d'erreur
   if (!logement) {
     return <Navigate to="/error" />;
   }
   // Fonction pour afficher les étoiles de rating
+  // Ici on utilise un tableau que l'on rempli d'étoiles en fonction de rating
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 0; i < 5; i++) {
@@ -29,7 +30,7 @@ const HousingFiles = () => {
     <div>
       <Header />
       <div className="housing-files">
-        {/* Carrousel centré */}
+        {/* Carrousel */}
         <div className="carrousel-container">
           <Slideshow pictures={logement.pictures} alt={logement.title} />
         </div>
