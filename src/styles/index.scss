@@ -32,6 +32,10 @@ html, body {
   --color-third: #f6f6f6;     /* Couleur de fond */
 }
 
+main {
+  width: 100%;
+}
+
 .body-container {
   display: flex;
   flex-direction: column;

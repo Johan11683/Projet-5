@@ -1,6 +1,11 @@
 .about-container {
-    display:flex ;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
-    width: 1240px;
-}
+    gap: 30px;
+    @media (max-width: 1024px) {
+        gap: 100px;
+      }
+  }

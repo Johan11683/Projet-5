@@ -24,9 +24,9 @@ const AppRouter = () => {
 export default AppRouter;
 
 
-// <Router> : Le Router englobe l'ensemble de tes routes. C'est ce qui permet à React de gérer la navigation entre les différentes pages sans recharger la page.
+// <Router> : Le Router englobe l'ensemble des routes. C'est ce qui permet à React de gérer la navigation entre les différentes pages sans recharger la page.
 
-// <Routes> : Ce composant englobe toutes les routes que tu veux définir pour ton application. 
+// <Routes> : Ce composant englobe toutes les routes à définir pour l'application. 
 // Chaque <Route> définit une URL et un composant à rendre lorsqu'une route correspond à l'URL donnée.
 
 // <Route path="/" element={<Layout><Home /></Layout>} /> : C'est un exemple de route où :

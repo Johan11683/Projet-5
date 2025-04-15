@@ -1,7 +1,7 @@
 // Variables pour la personnalisation et le responsive
 $housing-max-width: 1240px;
 $housing-padding: 20px;
-$housing-gap: 20px;
+$housing-gap: 30px;
 $housing-title-font-size: 36px;
 $housing-location-font-size: 18px;
 $tag-padding: 5px 15px;
@@ -20,6 +20,10 @@ $collapse-max-width-small: 100%;
   margin: 0 auto;
   padding: $housing-padding;
 
+  @media (max-width: 1024px) {
+    margin-bottom: 60px;
+  }
+
   .carrousel-container {
     text-align: center;
     margin-bottom: 40px;
@@ -31,15 +35,19 @@ $collapse-max-width-small: 100%;
     gap: $housing-gap;
     margin-bottom: $housing-gap;
 
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
       flex-direction: column;
-      align-items: center;
       gap: 10px;
     }
   }
 
   .housing-content-left {
     flex: 1;
+
+    @media (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .housing-title {
@@ -94,11 +102,10 @@ $collapse-max-width-small: 100%;
     align-items: flex-end;
     gap: $housing-gap;
 
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
       flex-direction: row-reverse;
       justify-content: space-between;
-      align-items: center;
-      width: 100%;
+      margin-bottom: 20px;
     }
   }
 
@@ -122,7 +129,6 @@ $collapse-max-width-small: 100%;
 
   .housing-host {
     display: flex;
-    align-items: center;
     gap: 10px;
   }
 
@@ -157,10 +163,10 @@ $collapse-max-width-small: 100%;
     gap: $housing-gap;
     justify-content: space-between;
 
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
       flex-direction: column;
-      gap: 10px;
       align-items: center;
+      gap: 30px;
     }
   }
 
@@ -169,8 +175,9 @@ $collapse-max-width-small: 100%;
     max-width: $collapse-max-width;
     margin-top: $housing-gap;
 
-    @media (max-width: 600px) {
-      max-width: $collapse-max-width-small;
+    @media (max-width: 1024px) {
+      width: 100%;
+      max-width: none;
       margin: 0;
     }
   }

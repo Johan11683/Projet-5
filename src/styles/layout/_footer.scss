@@ -16,9 +16,10 @@ footer {
       filter: brightness(0) invert(1); /* Change la couleur en blanc */
     }
   
-    @media (max-width: 600px) {
+    @media (max-width: 1024px) {
       font-size: 0.8rem;
-      padding: 20px 0 10px 0; /* Ajuster le padding pour les petits écrans */
+      margin-top: 100px;
+      padding: 60px 0 40px 0;
     }
   }
   

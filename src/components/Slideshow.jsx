@@ -21,7 +21,6 @@ const Slideshow = ({ pictures }) => {
     <div className="slideshow">
       <img
         src={pictures[currentIndex]}
-        alt={`Slide ${currentIndex + 1}`}
         className="slideshow-image"
       />
 

@@ -43,8 +43,8 @@ const HousingFiles = () => {
 
             {/* Affichage des tags */}
             <div className="housing-tags">
-              {logement.tags.map((tag, index) => (
-                <span key={index} className="tag">{tag}</span>
+              {logement.tags.map((tag) => (
+                <span key={tag} className="tag">{tag}</span> // remplacement du key index par key tag
               ))}
             </div>
           </div>
