@@ -6,6 +6,9 @@
     margin-bottom: 30px;
     gap: 30px;
     @media (max-width: 1024px) {
+        gap: 210px;
+      }
+      @media (max-width: 845px) {
         gap: 100px;
       }
   }

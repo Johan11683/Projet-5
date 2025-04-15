@@ -29,7 +29,7 @@ $card-bg-color: var(--color-third);
 }
 
 .card {
-  flex: 1 1 calc(33.33% - $gap); // 3 colonnes par défaut
+  flex: 1 1 calc(33.33% - $gap);
   max-width: $card-width;
   aspect-ratio: 1 / 1;
   position: relative;
@@ -44,11 +44,11 @@ $card-bg-color: var(--color-third);
   }
 
   @media (max-width: 1024px) {
-    flex: 1 1 calc(50% - $gap); // 2 colonnes
+    flex: 1 1 calc(50% - $gap);
   }
 
   @media (max-width: 600px) {
-    flex: 1 1 100%; // 1 colonne
+    flex: 1 1 100%;
     max-width: 100%;
   }
 

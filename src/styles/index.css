@@ -15,6 +15,11 @@
 }
 @media (max-width: 1024px) {
   .about-container {
+    gap: 210px;
+  }
+}
+@media (max-width: 845px) {
+  .about-container {
     gap: 100px;
   }
 }
